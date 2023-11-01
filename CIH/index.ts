@@ -1,12 +1,12 @@
 // Interfaz
-interface IVehiculo {
+interface Vehiculo {
     modelo: string;
     velocidadMaxima: number;
     mostrarPropiedades(): void;
 }
 
 // Clases
-class VehiculoTerrestre implements IVehiculo {
+class VehiculoTerrestre implements Vehiculo {
     constructor(public modelo: string, public velocidadMaxima: number) { }
 
     conducir(terreno: string) {
@@ -18,7 +18,7 @@ class VehiculoTerrestre implements IVehiculo {
     }
 }
 
-class VehiculoMaritimo implements IVehiculo {
+class VehiculoMaritimo implements Vehiculo {
     constructor(public modelo: string, public velocidadMaxima: number) { }
 
     navegar(oceano: string) {
@@ -30,7 +30,7 @@ class VehiculoMaritimo implements IVehiculo {
     }
 }
 
-class VehiculoAereo implements IVehiculo {
+class VehiculoAereo implements Vehiculo {
     constructor(public modelo: string, public velocidadMaxima: number) { }
 
     volar(altitud: string) {
